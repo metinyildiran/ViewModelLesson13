@@ -12,7 +12,7 @@ import com.example.viewmodellesson13.model.User
 class UserAdapter(
     private val context: Context,
     private val users: List<User>,
-    private val onRemove: (position: Int) -> Unit
+    private val onRemove: (user: User) -> Unit
 ) :
     RecyclerView.Adapter<UserAdapter.MyViewHolder>() {
 
@@ -42,7 +42,7 @@ class UserAdapter(
         holder.ivUser.load(user.profileImageUrl)
         holder.tvUserFullName.text = "${user.name} ${user.surname}"
         holder.ivRemove.setOnClickListener {
-            onRemove.invoke(position)
+            onRemove.invoke(user)
         }
     }
 }

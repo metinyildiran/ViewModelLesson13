@@ -26,7 +26,7 @@ class UsersViewModel : ViewModel() {
         ),
     )
 
-    private val _userList: MutableStateFlow<List<User>> = MutableStateFlow(users)
+    private val _userList: MutableStateFlow<MutableList<User>> = MutableStateFlow(users)
     val userList: StateFlow<List<User>> = _userList
 
     private val _adapter: MutableStateFlow<Adapter> = MutableStateFlow(Adapter.Idle)
@@ -38,11 +38,22 @@ class UsersViewModel : ViewModel() {
         class Add(val user: User) : Adapter()
     }
 
-    fun removeItem(position: Int) {
+    fun removeItem(user: User) {
         viewModelScope.launch {
-            users.removeAt(position)
-            _userList.value = users
-            _adapter.value = Adapter.Remove(position)
+            val removedUserListIndex = _userList.value.indexOf(user)
+
+            users.removeAt(removedUserListIndex)
+            _userList.value.removeAt(removedUserListIndex)
+
+            _adapter.value = Adapter.Remove(removedUserListIndex)
+        }
+    }
+
+    fun addItem(user: User) {
+        viewModelScope.launch {
+            _userList.value.add(user)
+
+            _adapter.value = Adapter.Add(user)
         }
     }
 }
