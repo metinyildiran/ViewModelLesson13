@@ -9,7 +9,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.example.viewmodellesson13.UserAdapter
 import com.example.viewmodellesson13.databinding.ActivityUsersBinding
 import com.example.viewmodellesson13.viewmodel.UsersViewModel
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class UsersActivity : AppCompatActivity() {
