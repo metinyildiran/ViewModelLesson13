@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <TextView
+        android:id="@+id/tvCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -14,5 +15,54 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvCounter" />
+
+    <Spinner
+        android:id="@+id/spItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/spItems" />
+
+    <Button
+        android:id="@+id/btnAddFruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Fruit"
+        app:layout_constraintTop_toBottomOf="@+id/etFruit" />
+
+    <Button
+        android:id="@+id/btnCounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Increase"
+        app:layout_constraintTop_toBottomOf="@+id/tvFruit" />
+
+    <Button
+        android:onClick="goToUsersActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to user activity"
+        app:layout_constraintBottom_toTopOf="@+id/goToCounterPage" />
+
+    <Button
+        android:id="@+id/goToCounterPage"
+        android:onClick="goToCounterPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to counter page"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
