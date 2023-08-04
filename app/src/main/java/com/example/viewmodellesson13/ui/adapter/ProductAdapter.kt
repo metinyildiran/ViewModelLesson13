@@ -1,4 +1,4 @@
-package com.example.viewmodellesson13.adapter
+package com.example.viewmodellesson13.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
 import com.example.viewmodellesson13.R
 import com.example.viewmodellesson13.databinding.ProductListItemBinding
-import com.example.viewmodellesson13.model.Product
+import com.example.viewmodellesson13.data.model.Product
 
 class ProductAdapter(
     private val context: Context,

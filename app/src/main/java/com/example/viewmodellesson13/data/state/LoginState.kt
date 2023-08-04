@@ -1,4 +1,4 @@
-package com.example.viewmodellesson13.model
+package com.example.viewmodellesson13.data.state
 
 sealed class LoginState {
     object Idle : LoginState()
@@ -6,5 +6,3 @@ sealed class LoginState {
     object Success : LoginState()
     class Error(val errorMessage: String) : LoginState()
 }
-
-data class UserLogin(val email: String, val password: String)

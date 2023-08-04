@@ -2,7 +2,7 @@ package com.example.viewmodellesson13.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.viewmodellesson13.model.User
+import com.example.viewmodellesson13.data.model.User
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

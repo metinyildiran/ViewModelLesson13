@@ -7,11 +7,10 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.viewmodellesson13.Util.showSnackbar
-import com.example.viewmodellesson13.adapter.ProductAdapter
+import com.example.viewmodellesson13.util.Util.showSnackbar
+import com.example.viewmodellesson13.ui.adapter.ProductAdapter
 import com.example.viewmodellesson13.databinding.ActivityProductsBinding
-import com.example.viewmodellesson13.model.ProductListState
-import com.google.android.material.snackbar.Snackbar
+import com.example.viewmodellesson13.data.state.ProductListState
 import kotlinx.coroutines.launch
 
 class ProductsActivity : AppCompatActivity() {

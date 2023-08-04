@@ -1,7 +1,7 @@
-package com.example.viewmodellesson13.model
+package com.example.viewmodellesson13.data.state
 
+import com.example.viewmodellesson13.data.model.Product
 import java.lang.Exception
-import java.util.UUID
 
 sealed class ProductListState {
     object Idle : ProductListState()
@@ -9,10 +9,3 @@ sealed class ProductListState {
     class Result(val products: List<Product>) : ProductListState()
     class Error(val exception: Exception) : ProductListState()
 }
-
-data class Product(
-    val name: String,
-    val imageUrl: String,
-    var isFavourite: Boolean = false,
-    val id: UUID = UUID.randomUUID()
-)

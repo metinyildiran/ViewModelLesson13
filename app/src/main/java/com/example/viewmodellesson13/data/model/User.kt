@@ -1,4 +1,4 @@
-package com.example.viewmodellesson13.model
+package com.example.viewmodellesson13.data.model
 
 import java.util.UUID
 

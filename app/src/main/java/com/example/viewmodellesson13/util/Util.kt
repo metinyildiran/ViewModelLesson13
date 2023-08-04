@@ -1,4 +1,4 @@
-package com.example.viewmodellesson13
+package com.example.viewmodellesson13.util
 
 import android.view.View
 import com.google.android.material.snackbar.Snackbar

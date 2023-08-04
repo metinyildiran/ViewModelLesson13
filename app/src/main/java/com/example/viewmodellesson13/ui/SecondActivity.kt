@@ -1,4 +1,4 @@
-package com.example.viewmodellesson13.view
+package com.example.viewmodellesson13.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
