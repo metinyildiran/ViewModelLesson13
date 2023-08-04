@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.viewmodellesson13.Util.showSnackbar
 import com.example.viewmodellesson13.adapter.ProductAdapter
 import com.example.viewmodellesson13.databinding.ActivityProductsBinding
 import com.example.viewmodellesson13.model.ProductListState
@@ -47,21 +48,13 @@ class ProductsActivity : AppCompatActivity() {
                         binding.rvProducts.adapter =
                             ProductAdapter(this@ProductsActivity, it.products) { product ->
                                 if (!product.isFavourite) {
-                                    Snackbar.make(
-                                        binding.root,
-                                        "${product.name} favorilere eklendi",
-                                        Snackbar.LENGTH_SHORT
-                                    ).setAction("Geri al") {
+                                    binding.root.showSnackbar("${product.name} favorilere eklendi") {
                                         viewModel.setFavourite(false, product)
-                                    }.show()
+                                    }
                                 } else {
-                                    Snackbar.make(
-                                        binding.root,
-                                        "${product.name} favorilerden çıkarıldı",
-                                        Snackbar.LENGTH_SHORT
-                                    ).setAction("Geri al") {
+                                    binding.root.showSnackbar("${product.name} favorilerden çıkarıldı") {
                                         viewModel.setFavourite(true, product)
-                                    }.show()
+                                    }
                                 }
 
                                 viewModel.setFavourite(!product.isFavourite, product)
