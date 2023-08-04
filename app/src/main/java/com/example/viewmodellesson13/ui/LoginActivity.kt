@@ -63,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.reactionState.collect {
                     binding.ivReaction.setImageResource(it.reactionResourceId)
+                    binding.root.setBackgroundColor(applicationContext.getColor(it.backgroundColor))
                 }
             }
         }
