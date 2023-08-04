@@ -51,6 +51,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tvFruit" />
 
     <Button
+        android:onClick="goToLoginActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to login activity"
+        app:layout_constraintBottom_toTopOf="@+id/goToUsersActivity" />
+
+    <Button
+        android:id="@+id/goToUsersActivity"
         android:onClick="goToUsersActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

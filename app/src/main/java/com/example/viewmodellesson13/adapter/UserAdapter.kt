@@ -1,4 +1,4 @@
-package com.example.viewmodellesson13
+package com.example.viewmodellesson13.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

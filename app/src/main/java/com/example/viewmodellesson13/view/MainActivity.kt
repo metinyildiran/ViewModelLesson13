@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import androidx.activity.viewModels
 import com.example.viewmodellesson13.databinding.ActivityMainBinding
 import com.example.viewmodellesson13.viewmodel.MainViewModel
+import com.example.viewmodellesson13.viewmodel.ProductsActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -59,5 +60,9 @@ class MainActivity : AppCompatActivity() {
 
     fun goToUsersActivity(view: View) {
         startActivity(Intent(this, UsersActivity::class.java))
+    }
+
+    fun goToLoginActivity(view: View) {
+        startActivity(Intent(this, LoginActivity::class.java))
     }
 }
