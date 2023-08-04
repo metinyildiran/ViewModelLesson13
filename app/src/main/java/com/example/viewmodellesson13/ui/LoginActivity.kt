@@ -1,18 +1,17 @@
 package com.example.viewmodellesson13.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.viewmodellesson13.databinding.ActivityLoginBinding
-import com.example.viewmodellesson13.data.state.LoginState
 import com.example.viewmodellesson13.data.model.UserLogin
-import com.example.viewmodellesson13.data.state.ReactionState
+import com.example.viewmodellesson13.data.state.LoginState
+import com.example.viewmodellesson13.databinding.ActivityLoginBinding
 import com.example.viewmodellesson13.viewmodel.LoginViewModel
 import com.example.viewmodellesson13.viewmodel.ProductsActivity
 import kotlinx.coroutines.launch

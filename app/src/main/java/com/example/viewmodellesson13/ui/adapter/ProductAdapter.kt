@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
 import com.example.viewmodellesson13.R
-import com.example.viewmodellesson13.databinding.ProductListItemBinding
 import com.example.viewmodellesson13.data.model.Product
+import com.example.viewmodellesson13.databinding.ProductListItemBinding
 
 class ProductAdapter(
     private val context: Context,

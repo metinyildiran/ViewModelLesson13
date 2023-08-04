@@ -3,8 +3,8 @@ package com.example.viewmodellesson13.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.viewmodellesson13.Database
-import com.example.viewmodellesson13.data.state.LoginState
 import com.example.viewmodellesson13.data.model.UserLogin
+import com.example.viewmodellesson13.data.state.LoginState
 import com.example.viewmodellesson13.data.state.ReactionState
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

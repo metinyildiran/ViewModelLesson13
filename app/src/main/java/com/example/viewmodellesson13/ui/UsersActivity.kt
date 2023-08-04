@@ -1,14 +1,14 @@
 package com.example.viewmodellesson13.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.viewmodellesson13.ui.adapter.UserAdapter
-import com.example.viewmodellesson13.databinding.ActivityUsersBinding
 import com.example.viewmodellesson13.data.model.User
+import com.example.viewmodellesson13.databinding.ActivityUsersBinding
+import com.example.viewmodellesson13.ui.adapter.UserAdapter
 import com.example.viewmodellesson13.viewmodel.UsersViewModel
 import kotlinx.coroutines.launch
 
