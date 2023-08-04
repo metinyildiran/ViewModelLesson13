@@ -12,6 +12,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.example.viewmodellesson13.databinding.ActivityLoginBinding
 import com.example.viewmodellesson13.data.state.LoginState
 import com.example.viewmodellesson13.data.model.UserLogin
+import com.example.viewmodellesson13.data.state.ReactionState
 import com.example.viewmodellesson13.viewmodel.LoginViewModel
 import com.example.viewmodellesson13.viewmodel.ProductsActivity
 import kotlinx.coroutines.launch
@@ -55,6 +56,14 @@ class LoginActivity : AppCompatActivity() {
                                 .show()
                         }
                     }
+                }
+            }
+        }
+
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.reactionState.collect {
+                    binding.ivReaction.setImageResource(it.reactionResourceId)
                 }
             }
         }

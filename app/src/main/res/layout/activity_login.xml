@@ -11,6 +11,12 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/ivReaction"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/_430615_emoticon_face_happy_reactions_smile_icon" />
+
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
